@@ -32,7 +32,7 @@ export const trendingDestinations = [
 
 export const testimonials = [
   {
-    title: 'Beautiful Memories with traveller Transworld',
+    title: 'Beautiful Memories with traveller',
     name: 'Ms. Stuti Patel',
     text: 'We had an unforgettable experience in Paris and Switzerland with traveller. The hotels were top notch...',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop',
@@ -52,6 +52,20 @@ export const testimonials = [
     avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop',
     region: 'Europe',
   },
+  {
+    title: 'Dream Trip to France and Swiss',
+    name: 'Mr. Dharmesh Shah',
+    text: 'Me and my family had an amazing experience on our first trip. The management was excellent.',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop',
+    region: 'Europe',
+  },
+  {
+    title: 'Dream Trip to France and Swiss',
+    name: 'Mr. Dharmesh Shah',
+    text: 'Me and my family had an amazing experience on our first trip. The management was excellent.',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop',
+    region: 'Europe',
+  },
 ]
 
 export const themeCards = [
@@ -60,11 +74,14 @@ export const themeCards = [
   { name: 'Honeymoon', image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=700&auto=format&fit=crop' },
   { name: 'Group Tours', image: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=700&auto=format&fit=crop' },
   { name: 'Short Breaks', image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=700&auto=format&fit=crop' },
+  { name: 'Super Saver', image: 'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=300&q=80' },
+  { name: 'Super Saver', image: 'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=300&q=80' },
+  { name: 'Super Saver', image: 'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=300&q=80' },
 ]
 
 export const offers = [
   { title: 'Vietnam Saver Tour', stars: 5, price: '1,03,117', image: 'https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1000&auto=format&fit=crop' },
-  { title: 'Bali Discovery', stars: 4, price: '1,00,010', image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1000&auto=format&fit=crop' },
+  { title: 'Bali Discovery', stars: 4, price: '1,00,010', image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop' },
   { title: 'Thailand Getaway', stars: 3, price: '45,500', image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1000&auto=format&fit=crop' },
 ]
 
