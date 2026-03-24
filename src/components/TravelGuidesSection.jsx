@@ -29,7 +29,7 @@ const sideArticles = [
 
 const TravelGuidesSection = () => {
   return (
-    <section className="py-4 md:py-8">
+    <section>
       <div>
         <h2 className="text-xl font-bold text-slate-900 md:text-3xl">
           Travel Guides &amp; Tips
