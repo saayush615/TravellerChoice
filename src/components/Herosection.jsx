@@ -19,7 +19,7 @@ const Herosection = () => {
         <Navbar />
 
         {/* hero-content */}
-        <div className="mx-auto mt-14 grid w-full max-w-350 items-center gap-10 lg:mt-20 lg:grid-cols-2">
+        <div className="mx-auto mt-14 grid w-full max-w-350 items-center gap-10 lg:mt-32 lg:grid-cols-2">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-3 py-1 text-sm font-semibold">
               <span className="h-2 w-2 rounded-full bg-emerald-400" />

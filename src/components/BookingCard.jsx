@@ -1,28 +1,39 @@
 import React, { useState } from 'react'
+import { format } from 'date-fns'
+import { CalendarIcon } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 
 const tabs = ['Flights', 'Hotels', 'Rentals']
 
 const BookingCard = () => {
   const [activeTab, setActiveTab] = useState('Flights')
+  const [date, setDate] = useState()
 
   return (
     <div className="w-full max-w-150 rounded-2xl bg-white/95 p-5 text-slate-800 shadow-2xl backdrop-blur-sm md:p-6">
       {/* Tabs */}
       <div className="grid grid-cols-3 gap-2 rounded-xl bg-slate-100 p-1">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            type="button"
-            onClick={() => setActiveTab(tab)}
-            className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
-              activeTab === tab
-                ? 'bg-white text-slate-900 shadow-sm'
-                : 'text-slate-500 hover:text-slate-700'
-            }`}
-          >
-            {tab}
-          </button>
-        ))}
+        {tabs.map((tab) => {
+          const isDisabled = tab !== 'Flights'
+          return (
+            <button
+              key={tab}
+              type="button"
+              disabled={isDisabled}
+              onClick={() => !isDisabled && setActiveTab(tab)}
+              className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
+                activeTab === tab
+                  ? 'bg-white text-slate-900 shadow-sm'
+                  : 'text-slate-500'
+              } ${isDisabled ? 'cursor-not-allowed opacity-60' : 'hover:text-slate-700'}`}
+            >
+              {tab}
+            </button>
+          )
+        })}
       </div>
 
       {/* Form */}
@@ -50,14 +61,31 @@ const BookingCard = () => {
         </div>
       </div>
 
+      {/* Shadcn Date Picker */}
       <div className="mt-4">
         <label className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-500">
           Departure
         </label>
-        <input
-          type="date"
-          className="h-12 w-full rounded-lg border border-slate-200 bg-white px-4 text-base outline-none ring-0 focus:border-slate-300"
-        />
+
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button
+              variant="outline"
+              className="h-12 w-full justify-between rounded-lg border-slate-200 bg-white px-4 text-left font-normal text-slate-800 hover:bg-white"
+            >
+              {date ? format(date, 'dd-MM-yyyy') : <span>dd-mm-yyyy</span>}
+              <CalendarIcon className="h-4 w-4 opacity-70" />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto p-0" align="start">
+            <Calendar
+              mode="single"
+              selected={date}
+              onSelect={setDate}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
       </div>
 
       <button
