@@ -1,6 +1,5 @@
 import React from 'react'
 import heroImg from '../assets/bg-image.jpg'
-import logo from '../assets/logo.png'
 import Navbar from './Navbar'
 
 const Herosection = () => {
@@ -15,15 +14,8 @@ const Herosection = () => {
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
 
       {/* Content section */}
-      <div className="relative z-10 min-h-screen w-full px-6 py-6 text-white md:px-12">
-        {/* navbar */}
-        <nav className="flex items-center justify-between">
-          <img src={logo} alt='Logo' />
-          <h2 className="text-xl font-semibold md:text-2xl">Traveller Choice</h2>
-          <button className="rounded-full border border-white/60 px-4 py-2 text-sm hover:bg-white hover:text-black transition">
-            Sign In
-          </button>
-        </nav>
+      <div className="relative z-10 min-h-screen w-full px-4 py-4 text-white md:px-12">
+        <Navbar />
 
         {/* hero-content */}
         <div className="mt-24 max-w-2xl md:mt-36">
